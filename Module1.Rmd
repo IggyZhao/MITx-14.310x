@@ -79,6 +79,15 @@ library(tidyverse)
 papers <- as_tibble(read_csv("./files/M1/CitesforSara.csv"))
 
 ```
+#17
+install.packages("tidyverse")
+library(tidyverse)
+papers <- as_tibble(read_csv("/Users/Evangeline/Desktop/CitesforSara.csv"))
+View(papers)
+
+papers_select <- select(papers,journal, year, cites, title, au1)
+papers_select
+
 
 Q. 19 Let's take a look at some of the most popular papers. 
 Using the filter() method, how many records exist where there are greater than or equal to 100 citations?
@@ -118,3 +127,6 @@ papers %>%
 n_distinct(papers$au1)
 ```
   
+#21
+papers_female <- select (papers,contains("female"))
+papers_female
